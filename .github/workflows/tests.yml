@@ -1,0 +1,30 @@
+on:
+  push:
+  pull_request:
+name: tests
+jobs:
+  Test:
+    strategy:
+      fail-fast: false
+      matrix:
+        go-version:
+          - 1.17.x
+          - 1.18.x
+          - 1.19.x
+          - 1.20.x
+          - 1.21.x
+          - 1.x
+        os:
+          - ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Install Go
+        uses: actions/setup-go@v4
+        with:
+          go-version: ${{ matrix.go-version }}
+      - name: Checkout code
+        uses: actions/checkout@v4
+      - name: Test
+        run: go test -coverprofile=coverage.txt -covermode=atomic ./...
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v3
