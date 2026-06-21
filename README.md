@@ -1,6 +1,6 @@
 # ico
 
-[![tests](https://github.com/sergeymakinen/go-ico/workflows/tests/badge.svg)](https://github.com/sergeymakinen/go-ico/actions?query=workflow%3Atests)
+[![Test](https://github.com/sergeymakinen/go-ico/actions/workflows/test.yml/badge.svg)](https://github.com/sergeymakinen/go-ico/actions/workflows/test.yml)
 [![Go Reference](https://pkg.go.dev/badge/github.com/sergeymakinen/go-ico.svg)](https://pkg.go.dev/github.com/sergeymakinen/go-ico)
 [![Go Report Card](https://goreportcard.com/badge/github.com/sergeymakinen/go-ico)](https://goreportcard.com/report/github.com/sergeymakinen/go-ico)
 [![codecov](https://codecov.io/gh/sergeymakinen/go-ico/branch/main/graph/badge.svg)](https://codecov.io/gh/sergeymakinen/go-ico)
